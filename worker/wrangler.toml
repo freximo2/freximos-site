@@ -1,0 +1,17 @@
+# Worker de contacto. Despliegue: npx wrangler deploy (en esta carpeta)
+# Secretos (no van aquí):
+#   npx wrangler secret put RESEND_API_KEY
+#   npx wrangler secret put TURNSTILE_SECRET_KEY
+
+name = "freximos-contact"
+main = "src/index.js"
+compatibility_date = "2026-01-01"
+
+# Se activa en la zona freximos.com, antes de que la petición llegue al túnel
+routes = [{ pattern = "freximos.com/api/contact", zone_name = "freximos.com" }]
+
+[vars]
+CONTACT_TO = "fredy.olarte.ia@outlook.com"
+# Dominio freximos.com verificado en Resend
+CONTACT_FROM = "Freximos <contacto@freximos.com>"
+ALLOWED_ORIGIN = "https://freximos.com"
