@@ -1,0 +1,15 @@
+# Copia este archivo a ~/.cloudflared/config.yml y reemplaza los valores.
+# Nunca subas el archivo real ni el JSON de credenciales al repositorio.
+tunnel: <TUNNEL_ID>
+credentials-file: /Users/<tu-usuario>/.cloudflared/<TUNNEL_ID>.json
+
+ingress:
+  - hostname: freximos.com
+    service: http://localhost:8081
+  - hostname: www.freximos.com
+    service: http://localhost:8081
+  - hostname: eventos.freximos.com
+    service: http://localhost:8083   # 8082 cuando producción de eventos esté activa
+  - hostname: dev-eventos.freximos.com
+    service: http://localhost:8083
+  - service: http_status:404
