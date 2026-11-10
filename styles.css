@@ -60,13 +60,13 @@ body {
 }
 
 .hero {
-  min-height: 70vh;
+  min-height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1.25rem;
-  padding: 4rem 1rem 3rem;
+  padding: 3rem 1rem 1rem;
   text-align: center;
   background: radial-gradient(ellipse at top, rgba(192, 132, 252, 0.10), transparent 60%);
 }
@@ -110,7 +110,7 @@ body {
 .services {
   max-width: 64rem;
   margin: 0 auto;
-  padding: 3rem 1rem;
+  padding: 1.5rem 1rem 3rem;
 }
 
 .services h2,
