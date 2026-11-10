@@ -6,10 +6,14 @@
     <meta name="robots" content="noindex" />
     <link rel="icon" type="image/png" href="/assets/freximos-icon.png" />
     <title>Eventos · Próximamente</title>
-    <link rel="stylesheet" href="/styles.css?v=3" />
+    <link rel="stylesheet" href="/styles.css?v=4" />
     <style>
       .soon { min-height: 80vh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.1rem; padding: 3rem 1rem; text-align: center; }
-      .soon .logo { width: min(170px, 46vw); }
+      .soon .logo { width: min(130px, 36vw); }
+      .construccion { width: 96px; height: 96px; }
+      .engranaje { animation: giro 14s linear infinite; transform-origin: 0 0; }
+      @keyframes giro { to { transform: rotate(360deg); } }
+      @media (prefers-reduced-motion: reduce) { .engranaje { animation: none; } }
       .badge { margin: 0; padding: 0.3rem 0.95rem; border: 1px solid var(--border); border-radius: 999px; color: var(--turquesa, #35d6c0); font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; }
       .soon h1 { margin: 0.2rem 0 0; font-size: clamp(1.7rem, 4.5vw, 2.5rem); font-weight: 600; }
       .soon .tagline { max-width: 34rem; margin: 0; color: var(--muted); font-size: 1.05rem; }
@@ -20,6 +24,19 @@
   </head>
   <body>
     <main class="soon">
+      <svg class="construccion" viewBox="-60 -60 120 120" width="120" height="120" aria-hidden="true">
+        <defs>
+          <linearGradient id="gc" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#35d6c0"/><stop offset="1" stop-color="#22c8e8"/>
+          </linearGradient>
+        </defs>
+        <g fill="none" stroke="url(#gc)" stroke-width="2.5" stroke-linejoin="round">
+          <g fill="url(#gc)" stroke="none" class="engranaje"><rect x="-6" y="-42" width="12" height="16" rx="3" transform="rotate(0)"/><rect x="-6" y="-42" width="12" height="16" rx="3" transform="rotate(45)"/><rect x="-6" y="-42" width="12" height="16" rx="3" transform="rotate(90)"/><rect x="-6" y="-42" width="12" height="16" rx="3" transform="rotate(135)"/><rect x="-6" y="-42" width="12" height="16" rx="3" transform="rotate(180)"/><rect x="-6" y="-42" width="12" height="16" rx="3" transform="rotate(225)"/><rect x="-6" y="-42" width="12" height="16" rx="3" transform="rotate(270)"/><rect x="-6" y="-42" width="12" height="16" rx="3" transform="rotate(315)"/><circle r="34"/></g>
+          <circle r="14" fill="#0b0d12"/>
+          <circle r="14"/>
+          <path d="M 26 -26 L 46 -46 M 46 -46 l 6 -2 l -2 6 l -6 -2 Z" stroke-width="3"/>
+        </g>
+      </svg>
       <div class="logo-frame">
         <img class="logo" src="/assets/freximos-full.png" alt="Freximos AI Systems" />
       </div>
